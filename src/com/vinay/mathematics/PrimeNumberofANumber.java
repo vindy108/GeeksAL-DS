@@ -7,9 +7,15 @@ public class PrimeNumberofANumber {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 			//primeNumbers(25);
-			sieveAlgo(25);
+			//sieveAlgo(25);
+			  sieveOptimized(25);
 	}
 
+	/*
+	 * To find the prime numbers which is less than input number
+	 * Input number is looped from 2 to n and then checked for prime
+	 * and value is printed
+	 */
 	public static void primeNumbers(int n){
 		
 		for(int i=2;i<=n;i++){
@@ -18,6 +24,11 @@ public class PrimeNumberofANumber {
 		}
 	}
 	
+	/*
+	 * We declare the size of Boolean array as isPrime [N+1] and initialize 
+	 * the value as true and we mark the multiples of 2, 3 and 5 as false.
+	 * The remaining numbers which are true are the prime numbers
+	 */
 	
 	public static void sieveAlgo(int n){
 		boolean isPrimeNumber[] = new boolean[n+1];
@@ -37,6 +48,25 @@ public class PrimeNumberofANumber {
 				
 		}
 		
+	}
+	/*
+	 * Optimized solution, we loop for i*i and eliminate a loop from earlier 
+	 * method
+	 */
+	
+	public static void sieveOptimized(int n){
+		boolean isPrime[] = new boolean[n+1];
+		Arrays.fill(isPrime, true);
+		
+		for(int i=2;i<=n;i++){
+			if(isPrime(i)){
+				System.out.println(i);
+				
+				for(int j=i*i;j<=n;j=j+i){
+					isPrime[j]=false;
+				}
+			}
+		}
 	}
 	
 	public static boolean isPrime(int n){

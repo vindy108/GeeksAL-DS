@@ -11,7 +11,9 @@ public class DivisorsOfNumber {
 
 	}
 	
-	
+	/*
+	 * For input value n, we loop for all natural numbers
+	 */
 	public static void divisorsNaive(int n){
 		
 		for(int i=1;i<=n;i++){
@@ -21,6 +23,10 @@ public class DivisorsOfNumber {
 		}
 	}
 	
+	/*
+	 * For input value n, we loop for sqrt(n) based on pairs
+	 * But output in this case will not be in sorted order
+	 */
 	
 	public static void divisorsEff(int n){
 		
@@ -36,7 +42,7 @@ public class DivisorsOfNumber {
 	
 	public static void divisorsMoreEff(int n){
 		int i;
-		for(i=1;i*i<=n;i++){
+		for(i=1;i*i< n;i++){
 			if(n%i==0)
 			System.out.println("Divisors are " +i);
 		}
