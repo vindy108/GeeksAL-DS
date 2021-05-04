@@ -11,7 +11,7 @@ public class GCDofnumbers {
 		int y = gcdeuclid(10, 15);
 		System.out.println("euclid gcd " + y);
 
-		int z = gcdoptim(10, 15);
+		int z = gcdoptim(9, 10);
 		System.out.println("optim gcd " + z);
 
 	}
@@ -54,10 +54,10 @@ public class GCDofnumbers {
 
 	/*
 	 * In x%y if x is < y then the result will always be x.
-	 * gcd(10,15)
-	 * 	gcd(15,10)
-	 * 		gcd(10,5)
-	 * 			gcd(5,0)
+	 * gcd(9,10)
+	 * 	gcd(10,9)
+	 * 		gcd(9,1)
+	 * 			gcd(1,0)
 	 */
 	public static int gcdoptim(int a, int b) {
 

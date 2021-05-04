@@ -4,8 +4,8 @@ public class CheckBitSet {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//findKBitLeft(5,3);
-		findKBitRight(13,3);
+		//findKBitLeft(39,5);
+		findKBitRight(39,5);
 
 	}
 
@@ -25,7 +25,7 @@ public class CheckBitSet {
 			
 		}
 	/*
-	 * For(5,3)
+	 * For(13,3)
 	 * Using right shift operator	 * 
 	 * n=		  00..1101 
 	 * 1=         00.....1(&)

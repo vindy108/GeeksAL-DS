@@ -5,13 +5,13 @@ public class PrimeFactors {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//primeFactNaive(60);
-		//primeFactEff(450);
+		primeFactEff(450);
 		 primeFactMore(621);
 
 	}
 
 	/*
-	 * Find if the input number is a prime from 2 to (n-1), thencheck if the
+	 * Find if the input number is a prime from 2 to (n-1), then check if the
 	 * input number is divisible by prime factor and its factor
 	 */
 
